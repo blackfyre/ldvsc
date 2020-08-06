@@ -1,0 +1,30 @@
+{
+    "name": "Laravel",
+    "service": "workspace",
+    "remoteUser": "vscoder",
+    "shutdownAction": "stopCompose",
+    "workspaceFolder": "/laravel",
+    "dockerComposeFile": "docker-compose.yml",
+    "postCreateCommand": [
+        "sudo chown -R vscoder:vscoder /laravel",
+        "sudo chown -R vscoder:vscoder /home/vscoder/.composer/",
+        "sudo chown -R vscoder:vscoder /home/vscoder/.vscode-server/",
+    ],
+
+    "extensions": [
+        "bmewburn.vscode-intelephense-client",
+        "eamodio.gitlens",
+        "EditorConfig.EditorConfig",
+        "mikestead.dotenv",
+        "ms-azuretools.vscode-docker",
+        "onecentlin.laravel-blade",
+        "redhat.vscode-yaml",
+        "wongjn.php-sniffer"
+    ],
+
+    "settings": {
+        "phpSniffer.executablesFolder": "./vendor/bin/",
+        "phpSniffer.run": "onSave",
+        "terminal.integrated.shell.linux": "/bin/bash"
+    }
+}
