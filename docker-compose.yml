@@ -12,18 +12,22 @@ services:
      - vs-code:/home/vscoder/.vscode-server
   php-fpm:
     build: services/php-fpm
-    volumes: [ ..:/laravel ]
+    volumes:
+      - ..:/laravel
   nginx:
     build: services/nginx
-    depends_on: [ php-fpm ]
-    volumes: [ ..:/laravel ]
-    ports: [ 8000:80 ]
+    depends_on:
+      - php-fpm
+    volumes:
+      - ..:/laravel
+    ports:
+      - 8000:80
   phpredmin:
     image: sasanrose/phpredmin
     environment:
         - PHPREDMIN_DATABASE_REDIS_0_HOST=redis
     ports:
-        - "8080:80"
+        - 8080:80
     depends_on:
         - redis
   redis:
@@ -46,7 +50,7 @@ services:
       PMA_PORT: 3306
     restart: always
     ports:
-      - 8183:80
+      - 8183:80 
   mailhog:
     image: mailhog/mailhog
     ports: 
