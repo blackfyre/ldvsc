@@ -9,6 +9,7 @@
         "sudo chown -R vscoder:vscoder /laravel",
         "sudo chown -R vscoder:vscoder /home/vscoder/.composer/",
         "sudo chown -R vscoder:vscoder /home/vscoder/.vscode-server/",
+        "chmod -R 777 /laravel/storage/"
     ],
 
     "extensions": [
