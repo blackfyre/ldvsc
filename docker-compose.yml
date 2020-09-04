@@ -23,7 +23,7 @@ services:
     volumes:
       - ..:/laravel
     ports:
-      - 8000:80
+      - 80:80
   phpredmin:
     image: sasanrose/phpredmin
     environment:
