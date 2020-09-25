@@ -13,7 +13,7 @@ RUN apk add --no-cache nodejs npm yarn
 # Install quality-of-life packages.
 RUN apk add --no-cache bash curl git vim nano openssh
 # Create a vscoder user group and user account.
-RUN addgroup -g 1000 -S vscoder && adduser -u 1000 -S vscoder -G vscoder
+RUN addgroup -g 1333 -S vscoder && adduser -u 1333 -S vscoder -G vscoder && chown -R vscoder:vscoder /home/vscoder/
 # Copy the .bashrc file for vscoder.
 COPY .bashrc /home/vscoder/.bashrc
 # Install sudo exec

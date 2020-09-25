@@ -1,14 +1,14 @@
 {
     "name": "Laravel",
     "service": "workspace",
+    "containerUser": "vscoder",
     "remoteUser": "vscoder",
     "shutdownAction": "stopCompose",
     "workspaceFolder": "/laravel",
     "dockerComposeFile": "docker-compose.yml",
     "postCreateCommand": [
         "sudo chown -R vscoder:vscoder /laravel",
-        "sudo chown -R vscoder:vscoder /home/vscoder/.composer/",
-        "sudo chown -R vscoder:vscoder /home/vscoder/.vscode-server/",
+        "sudo chown -R vscoder:vscoder /home/vscoder/",
         "chmod -R 777 /laravel/storage/"
     ],
 
