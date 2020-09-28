@@ -9,7 +9,8 @@
     "postCreateCommand": [
         "sudo chown -R vscoder:vscoder /laravel",
         "sudo chown -R vscoder:vscoder /home/vscoder/",
-        "chmod -R 777 /laravel/storage/"
+        "chmod -R 777 /laravel/storage/",
+        "composer global require \"squizlabs/php_codesniffer=*\""
     ],
 
     "extensions": [

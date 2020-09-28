@@ -2,6 +2,8 @@ version: '3.7'
 services:
   workspace:
     build: services/workspace
+    environment:
+      COMPOSER_MEMORY_LIMIT: -1
     links:
       - mysql
       - redis
@@ -52,10 +54,10 @@ services:
       PMA_PORT: 3306
     restart: always
     ports:
-      - 8183:80 
+      - 8183:80
   mailhog:
     image: mailhog/mailhog
-    ports: 
+    ports:
       - 1025:1025 # smtp server
       - 8025:8025 # web ui
 volumes:
