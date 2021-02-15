@@ -31,7 +31,9 @@ It also adds a few VSCode plugins ment for php development to your remote instan
 The recommended way of installing the environment is to add it clone it into your project:
 
 ```
-git clone git@github.com:blackfyre/ldvsc.git .devcontainer
+git clone --depth=1 git@github.com:blackfyre/ldvsc.git .devcontainer
+// Optional: clean git information
+rm -rf .devcontainer/.git*
 ```
 The important bit here is the `.devcontainer` directory designation! This is what VSCode will take notice of!
 
